@@ -1,0 +1,97 @@
+{
+     "name": "bridge",
+  "version": "0.0.0",
+  "license": "ISC",
+
+  "private": true,
+
+  "author": "Strider <strange.transistor@gmail.com>",
+  "description": "config loader",
+
+  "homepage":            "https://github.com/StreetStrider/bridge",
+  "repository": { "url": "https://github.com/StreetStrider/bridge.git", "type": "git" },
+  "bugs":       { "url": "https://github.com/StreetStrider/bridge/issues" },
+
+  "engines":
+  {
+    "node": ">=7"
+  },
+
+  "main": "",
+
+  "metalbox":
+  {
+    "presets":
+    {
+      "npm": [ "Library", { "options": { "targets": "node-first" }} ]
+    }
+  },
+
+  "files":
+  [
+  ],
+
+  "scripts":
+  {
+    "start":
+      "metalbox preset dev",
+
+
+    "st":
+      "eslint src/ test/",
+
+    "flow":
+      "flow check",
+
+
+    "mocha":
+                      "mocha    --recursive test/case/",
+    "cover":
+      "istanbul cover _mocha -- --recursive test/case/",
+
+
+    "test":
+      "npm run st && npm run flow && npm run mocha",
+
+
+    "release":
+      "metalbox preset npm"
+  },
+
+  "peerDependencies":
+  {
+  },
+
+  "dependencies":
+  {
+  },
+
+  "devDependencies":
+  {
+    "metalbox":
+      "1",
+
+
+    "eslint":
+      "3",
+
+    "js-outlander":
+      "StrangeTransistor/js-outlander#2.1.1",
+
+    "flow-bin":
+      "0.50",
+
+    "flow-typed":
+      "2",
+
+
+    "mocha":
+      "3",
+
+    "chai":
+      "3",
+
+    "istanbul":
+      "0.4"
+  }
+}
