@@ -64,6 +64,8 @@
 
   "dependencies":
   {
+    "hjson":
+      "3"
   },
 
   "devDependencies":
