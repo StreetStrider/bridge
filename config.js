@@ -35,8 +35,7 @@ export default function config (options: any)
 
 	if (_.release)
 	{
-		let release  = _.release
-		let instance = release.instance
+		let instance = _.release.instance
 
 		if (instance)
 		{
