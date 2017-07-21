@@ -11,19 +11,29 @@ export default function read (path: string)
 
 read.maybe = function (path: string, defval: any = null)
 {
-	try
+	return coalesce([ path ], defval)
+}
+
+var coalesce = read.coalesce = function (paths: string[], defval: any = null)
+{
+	for (let path of paths)
 	{
-		return read(path)
-	}
-	catch (e)
-	{
-		if (e.code === 'ENOENT')
+		try
 		{
-			return defval
+			return read(path)
 		}
-		else
+		catch (e)
 		{
-			throw e
+			if (e.code === 'ENOENT')
+			{
+				continue
+			}
+			else
+			{
+				throw e
+			}
 		}
 	}
+
+	return defval
 }
