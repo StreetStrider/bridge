@@ -26,9 +26,26 @@ export default function config (options: any)
 
 	cfg._ = {}
 
-	cfg._.package = read(fromroot('package.json'))
-	cfg._.release = read.maybe(fromroot('release.json'))
-	cfg._.main    = read.coalesce(candidates(fromcfg, options.file), {})
+	cfg._.package  = read(fromroot('package.json'))
+	cfg._.release  = read.maybe(fromroot('release.json'))
+	cfg._.main     = read.coalesce(candidates(fromcfg, options.file), {})
+	cfg._.instance = null
+	cfg._.dev      = null
+
+	if (cfg._.release)
+	{
+		let release  = cfg._.release
+		let instance = release.instance
+
+		if (instance)
+		{
+			cfg._.instance = read.coalesce(candidates(fromcfg, instance), {})
+		}
+	}
+	else
+	{
+		cfg._.dev = read.coalesce(candidates(fromcfg, 'dev'), {})
+	}
 
 	return cfg
 }
