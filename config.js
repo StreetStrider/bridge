@@ -2,6 +2,8 @@
 
 import type { T_Rootpath as Rootpath } from 'rootpath'
 
+type Path = string | string[]
+
 var assign = Object.assign
 
 import rootpath  from 'rootpath'
@@ -58,9 +60,14 @@ export default function config (options: any)
 
 	cfg._ = _
 
-	cfg.$get = function $get (path: string | string[], defval: any)
+	cfg.$get = function $get (path: Path, defval: any)
 	{
 		return get(cfg, path, defval)
+	}
+
+	cfg.$nsget = function $nsget (ns: string, path: Path, defval: any)
+	{
+		return get(get(_, ns), path, defval)
 	}
 
 	return cfg
