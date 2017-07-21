@@ -24,6 +24,7 @@ export default function config (options: any)
 	cfg._ = {}
 
 	cfg._.package = read(fromroot('package.json'))
+	cfg._.release = read.maybe(fromroot('release.json'))
 
 	return cfg
 }
