@@ -34,3 +34,5 @@ var cfg = bridge()
 `6A`. Having all `package`, `release`, `instance`, `dev`, `merged` and `all` configs separately allows to precise options picking. `all` and `merged` are recommended in the majority of the cases.
 
 `6B`. Make `all` config accessible directly on `cfg`, i.e merge it to the `cfg` itself. If you have `port` option in your `cfg.hjson` it will be accessible via `cfg._.main.port`, `cfg._.merged.port`, `cfg._.all.port` or simply `cfg.port`. The last form is OK but can lead to conflicts in rare cases when you're not fully understand your own config schema. In that cases use precision namespaces (`merged` is the good way).
+
+`7`. bridge will also expose some helper functions ontop of it (like `$get`). If that conflicts with your config schema, just access directly to underlying `merged` or `all` or use helpers on its own to access such conflicting names.
