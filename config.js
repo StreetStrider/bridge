@@ -4,9 +4,10 @@ import type { T_Rootpath as Rootpath } from 'rootpath'
 
 var assign = Object.assign
 
-import rootpath from 'rootpath'
+import rootpath  from 'rootpath'
 import find_root from 'find-root'
-import { get } from 'object-path'
+import merge     from 'lodash/merge'
+import { get }   from 'object-path'
 
 import read from './read'
 
@@ -32,6 +33,7 @@ export default function config (options: any)
 	cfg._.main     = read.coalesce(candidates(fromcfg, options.file), {})
 	cfg._.instance = null
 	cfg._.dev      = null
+	cfg._.merged   = {}
 
 	if (cfg._.release)
 	{
@@ -42,10 +44,14 @@ export default function config (options: any)
 		{
 			cfg._.instance = read.coalesce(candidates(fromcfg, instance), {})
 		}
+
+		merge(cfg._.merged, cfg._.instance)
 	}
 	else
 	{
 		cfg._.dev = read.coalesce(candidates(fromcfg, 'dev'), {})
+
+		merge(cfg._.merged, cfg._.dev)
 	}
 
 	cfg.$get = function $get (path: string | string[], defval: any)

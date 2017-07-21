@@ -73,6 +73,9 @@
     "hjson":
       "3",
 
+    "lodash":
+      "4",
+
     "object-path":
       "0.11"
   },
