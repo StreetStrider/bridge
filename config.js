@@ -54,7 +54,7 @@ export default function config (options: any)
 
 	merge(_.all, _.package, _.release, _.merged)
 
-	var cfg = {}
+	var cfg = merge({}, _.all)
 
 	cfg._ = _
 
