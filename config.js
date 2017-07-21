@@ -60,7 +60,7 @@ export default function config (options: any)
 
 	cfg.$get = function $get (path: string | string[], defval: any)
 	{
-		return get(_.main, path, defval)
+		return get(cfg, path, defval)
 	}
 
 	return cfg
