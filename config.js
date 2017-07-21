@@ -6,6 +6,7 @@ var assign = Object.assign
 
 import rootpath from 'rootpath'
 import find_root from 'find-root'
+import { get } from 'object-path'
 
 import read from './read'
 
@@ -45,6 +46,11 @@ export default function config (options: any)
 	else
 	{
 		cfg._.dev = read.coalesce(candidates(fromcfg, 'dev'), {})
+	}
+
+	cfg.$get = function $get (path: string | string[], defval: any)
+	{
+		return get(cfg._.main, path, defval)
 	}
 
 	return cfg

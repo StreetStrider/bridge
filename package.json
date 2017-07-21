@@ -71,7 +71,10 @@
       "StreetStrider/rootpath#v1.8.1",
 
     "hjson":
-      "3"
+      "3",
+
+    "object-path":
+      "0.11"
   },
 
   "devDependencies":
