@@ -32,6 +32,7 @@ export default function config (options: any)
 	_.instance = null
 	_.dev      = null
 	_.merged   = merge({}, _.main)
+	_.all      = {}
 
 	if (_.release)
 	{
@@ -50,6 +51,8 @@ export default function config (options: any)
 
 		merge(_.merged, _.dev)
 	}
+
+	merge(_.all, _.package, _.release, _.merged)
 
 	var cfg = {}
 
