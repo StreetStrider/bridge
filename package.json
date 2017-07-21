@@ -17,7 +17,7 @@
     "node": ">=7"
   },
 
-  "main": "",
+  "main": "config",
 
   "metalbox":
   {
@@ -64,6 +64,12 @@
 
   "dependencies":
   {
+    "find-root":
+      "1",
+
+    "rootpath":
+      "StreetStrider/rootpath#v1.8.1",
+
     "hjson":
       "3"
   },
