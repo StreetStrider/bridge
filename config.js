@@ -24,39 +24,41 @@ export default function config (options: any)
 	var fromroot = rootpath(find_root(process.cwd()))
 	var fromcfg  = fromroot.partial(options.dir)
 
-	var cfg = {}
+	var _ = {}
 
-	cfg._ = {}
+	_.package  = read(fromroot('package.json'))
+	_.release  = read.maybe(fromroot('release.json'))
+	_.main     = read.coalesce(candidates(fromcfg, options.file), {})
+	_.instance = null
+	_.dev      = null
+	_.merged   = {}
 
-	cfg._.package  = read(fromroot('package.json'))
-	cfg._.release  = read.maybe(fromroot('release.json'))
-	cfg._.main     = read.coalesce(candidates(fromcfg, options.file), {})
-	cfg._.instance = null
-	cfg._.dev      = null
-	cfg._.merged   = {}
-
-	if (cfg._.release)
+	if (_.release)
 	{
-		let release  = cfg._.release
+		let release  = _.release
 		let instance = release.instance
 
 		if (instance)
 		{
-			cfg._.instance = read.coalesce(candidates(fromcfg, instance), {})
+			_.instance = read.coalesce(candidates(fromcfg, instance), {})
 		}
 
-		merge(cfg._.merged, cfg._.instance)
+		merge(_.merged, _.instance)
 	}
 	else
 	{
-		cfg._.dev = read.coalesce(candidates(fromcfg, 'dev'), {})
+		_.dev = read.coalesce(candidates(fromcfg, 'dev'), {})
 
-		merge(cfg._.merged, cfg._.dev)
+		merge(_.merged, _.dev)
 	}
+
+	var cfg = {}
+
+	cfg._ = _
 
 	cfg.$get = function $get (path: string | string[], defval: any)
 	{
-		return get(cfg._.main, path, defval)
+		return get(_.main, path, defval)
 	}
 
 	return cfg
