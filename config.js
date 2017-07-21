@@ -31,7 +31,7 @@ export default function config (options: any)
 	_.main     = read.coalesce(candidates(fromcfg, options.file), {})
 	_.instance = null
 	_.dev      = null
-	_.merged   = {}
+	_.merged   = merge({}, _.main)
 
 	if (_.release)
 	{
