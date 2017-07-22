@@ -60,12 +60,12 @@ export default function config (options: any)
 
 	cfg._ = _
 
-	cfg.$get = function $get (path: Path, defval: any)
+	cfg.get = function get (path: Path, defval: any)
 	{
 		return get(_.all, path, defval)
 	}
 
-	cfg.$nsget = function $nsget (ns: string, path: Path, defval: any)
+	cfg.nsget = function nsget (ns: string, path: Path, defval: any)
 	{
 		return get(get(_, ns), path, defval)
 	}
