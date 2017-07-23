@@ -1,8 +1,8 @@
 /* @flow */
 
-import config from './config'
+import bridge from './config'
 
-var c = config()
+var c = bridge()
 
 console.log(c)
 console.log('port', c.get('port'))

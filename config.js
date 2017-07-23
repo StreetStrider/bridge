@@ -19,7 +19,7 @@ var defaults =
 	file: 'cfg',
 }
 
-export default function config (options: any)
+export default function bridge (options: any)
 {
 	options = assign({}, defaults, options)
 
