@@ -1,6 +1,6 @@
 /* @flow */
 
-import bridge from './config'
+import bridge from './'
 
 var c = bridge()
 

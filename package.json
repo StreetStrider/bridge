@@ -17,7 +17,7 @@
     "node": ">=7"
   },
 
-  "main": "config",
+  "main": "bridge",
 
   "metalbox":
   {
