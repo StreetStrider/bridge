@@ -9,7 +9,7 @@ var assign = Object.assign
 import rootpath  from 'rootpath'
 import find_root from 'find-root'
 import merge     from 'lodash/merge'
-import { get }   from 'object-path'
+import { get as getpath } from 'object-path'
 
 import read from './read'
 
@@ -62,12 +62,12 @@ export default function config (options: any)
 
 	cfg.get = function get (path: Path, defval: any)
 	{
-		return get(_.all, path, defval)
+		return getpath(_.all, path, defval)
 	}
 
 	cfg.nsget = function nsget (ns: string, path: Path, defval: any)
 	{
-		return get(get(_, ns), path, defval)
+		return getpath(getpath(_, ns), path, defval)
 	}
 
 	return cfg
