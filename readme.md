@@ -58,3 +58,6 @@ Namespaces:
 
 * `dir: string = 'cfg/'` — directory where config's family live (main/instance/dev configs). Path may be relative to package's root.
 * `file: string = 'cfg'` — main config file. bridge will always look up for `{<file>.hjson,<file>.json,<file>}`.
+
+## license
+ISC, © 2017, Strider.
