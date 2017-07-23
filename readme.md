@@ -29,7 +29,7 @@ var cfg = bridge(options)
 
 **5C**. Both instance and dev configs are meant to share the same structure (or schema) as main config. That allows to merge them to main config. Such kind of merging open way for flexible config management both in dev and production. Having `release.json`, instance configs and gitignored dev config we can completely get rid of crappy ENV variables and other like solutions.
 
-**5D**. Update main config recursively (`lodash.merge`) with instance/dev config and mount it to `cfg._.merged`.
+**5D**. Update main config recursively ([`lodash.merge`](https://lodash.com/docs/4.17.4#merge)) with instance/dev config and mount it to `cfg._.merged`.
 
 **6**. After all configs are all set, create one unite config for short access and conveniece. Merge `cfg._.package`, `cfg._.release` and `cfg._.merged` and mount it to `cfg._.all`.
 
