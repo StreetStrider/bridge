@@ -2,11 +2,13 @@
 
 **bridge** is a simple Node.js config loader with some conventions.
 
+
 ## how it works
+
 ```js
 import bridge from 'bridge'
 
-var cfg = bridge()
+var cfg = bridge(options)
 ```
 
 **bridge** will find package root from process.cwd() then load configs following next principles:
@@ -37,7 +39,9 @@ var cfg = bridge()
 
 **7**. bridge will also expose some helper functions ontop of it (like `cfg.get`). If that conflicts with your config schema, just access underlying `merged` or `all` namespaces directly or use helpers on its own to access such conflicting names.
 
+
 ## helpers API
+
 `cfg.get(path: string | string[], defval: any)` — retrieve option from `all` by string / dotpath / array path ([object-path#get](https://www.npmjs.com/package/object-path)). If option is not present `defval` is used (or undefined by default).
 
 `cfg.nsget(namespace: string, path: string | string[], defval: any)` — retrieve option from certain namespace.
@@ -49,3 +53,8 @@ Namespaces:
 * `dev`
 * `merged`
 * `all`
+
+## options
+
+* `dir: string = 'cfg/'` — directory where config's family live (main/instance/dev configs). Path may be relative to package's root.
+* `file: string = 'cfg'` — main config file. bridge will always look up for `{<file>.hjson,<file>.json,<file>}`.
