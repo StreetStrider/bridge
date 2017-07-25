@@ -1,0 +1,12 @@
+{
+  "timestamp": "2017-06-22T00:00:00.000Z",
+  "version": "0.0.0",
+  "instance": "battle",
+  "name": "battle-battle",
+  "git": {
+    "rev": "555953b2129fddd2038e25bd98d7977ce06e1ebc",
+    "msg": "msg",
+    "timestamp": "2017-06-22T00:00:00+00:00",
+    "author": "Strider"
+  }
+}
