@@ -1,5 +1,7 @@
 {
   "name":    "dev-no",
   "version": "0.0.0",
-  "private":  true
+  "private":  true,
+
+  "override": "package"
 }

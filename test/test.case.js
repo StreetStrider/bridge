@@ -55,21 +55,25 @@ describe('bridge', () =>
 				name: 'dev',
 				version: '0.0.0',
 				private: true,
+				override: 'package',
 			},
 			release: null,
 			main:
 			{
 				main: true,
+				override: 'main',
 			},
 			dev:
 			{
 				dev: true,
+				override: 'dev',
 			},
 			instance: null,
 			merged:
 			{
 				main: true,
 				dev:  true,
+				override: 'dev',
 			},
 			all:
 			{
@@ -78,6 +82,7 @@ describe('bridge', () =>
 				private: true,
 				main: true,
 				dev: true,
+				override: 'dev',
 			}
 		})
 	})
@@ -95,17 +100,20 @@ describe('bridge', () =>
 				name: 'dev-no',
 				version: '0.0.0',
 				private: true,
+				override: 'package',
 			},
 			release: null,
 			main:
 			{
 				main: true,
+				override: 'main',
 			},
 			dev: {},
 			instance: null,
 			merged:
 			{
 				main: true,
+				override: 'main',
 			},
 			all:
 			{
@@ -113,6 +121,7 @@ describe('bridge', () =>
 				version: '0.0.0',
 				private: true,
 				main: true,
+				override: 'main',
 			}
 		})
 	})

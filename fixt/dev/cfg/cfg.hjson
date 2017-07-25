@@ -1,3 +1,4 @@
 {
 	main: true
+	override: main
 }
