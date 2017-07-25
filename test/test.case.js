@@ -13,6 +13,35 @@ var fromfix  = fromroot.partial('fixt/')
 
 describe('bridge', () =>
 {
+	it('exposes API', () =>
+	{
+		var cfg = bridge()
+
+		expect(cfg).property('get')
+		expect(cfg.get).a('function')
+
+		expect(cfg).property('nsget')
+		expect(cfg.nsget).a('function')
+
+		expect(cfg).property('_')
+		expect(cfg._).an('object')
+
+		expect(cfg._).property('package')
+		expect(cfg._).property('release')
+		expect(cfg._).property('main')
+		expect(cfg._).property('dev')
+		expect(cfg._).property('instance')
+		expect(cfg._).property('merged')
+		expect(cfg._).property('all')
+
+		expect(cfg).property('license')
+		expect(cfg._.package).property('license')
+		expect(cfg._.all).property('license')
+
+		expect(cfg.license).eq(cfg._.package.license)
+		expect(cfg.license).eq(cfg._.all.license)
+	})
+
 	it('dev', () =>
 	{
 		process.chdir(fromfix('dev'))
