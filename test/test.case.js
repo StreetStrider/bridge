@@ -81,4 +81,39 @@ describe('bridge', () =>
 			}
 		})
 	})
+
+	it('dev (no dev config)', () =>
+	{
+		process.chdir(fromfix('dev-no'))
+
+		var cfg = bridge()
+
+		expect(cfg._).deep.eq(
+		{
+			package:
+			{
+				name: 'dev-no',
+				version: '0.0.0',
+				private: true,
+			},
+			release: null,
+			main:
+			{
+				main: true,
+			},
+			dev: {},
+			instance: null,
+			merged:
+			{
+				main: true,
+			},
+			all:
+			{
+				name: 'dev-no',
+				version: '0.0.0',
+				private: true,
+				main: true,
+			}
+		})
+	})
 })
