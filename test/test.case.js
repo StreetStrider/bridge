@@ -4,6 +4,7 @@ declare var describe: Function;
 declare var it: Function;
 
 import rootpath from 'rootpath'
+import { expect } from 'chai'
 
 import bridge from '../'
 
@@ -18,7 +19,37 @@ describe('bridge', () =>
 
 		var cfg = bridge()
 
-		console.log(cfg._.main)
-		console.log(cfg.get('main'))
+		expect(cfg._).deep.eq(
+		{
+			package:
+			{
+				name: 'dev',
+				version: '0.0.0',
+				private: true,
+			},
+			release: null,
+			main:
+			{
+				main: true,
+			},
+			dev:
+			{
+				dev: true,
+			},
+			instance: null,
+			merged:
+			{
+				main: true,
+				dev:  true,
+			},
+			all:
+			{
+				name: 'dev',
+				version: '0.0.0',
+				private: true,
+				main: true,
+				dev: true,
+			}
+		})
 	})
 })
