@@ -1,0 +1,7 @@
+{
+  "name":    "battle-no",
+  "version": "0.0.0",
+  "private":  true,
+
+  "override": "package"
+}

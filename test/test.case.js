@@ -192,4 +192,65 @@ describe('bridge', () =>
 			}
 		})
 	})
+
+	it('battle', () =>
+	{
+		process.chdir(fromfix('battle-no'))
+
+		var cfg = bridge()
+
+		expect(cfg._).deep.eq(
+		{
+			package:
+			{
+				name: 'battle-no',
+				version: '0.0.0',
+				private: true,
+				override: 'package',
+			},
+			release:
+			{
+				timestamp: '2017-06-22T00:00:00.000Z',
+				version: '0.0.0',
+				instance: 'battle',
+				name: 'battle-no-battle',
+				git:
+				{
+					rev: '555953b2129fddd2038e25bd98d7977ce06e1ebc',
+					msg: 'msg',
+					timestamp: '2017-06-22T00:00:00+00:00',
+					author: 'Strider'
+				}
+			},
+			main:
+			{
+				main: true,
+				override: 'main',
+			},
+			dev: null,
+			instance: {},
+			merged:
+			{
+				main: true,
+				override: 'main',
+			},
+			all:
+			{
+				name: 'battle-no-battle',
+				version: '0.0.0',
+				private: true,
+				timestamp: '2017-06-22T00:00:00.000Z',
+				instance: 'battle',
+				git:
+				{
+					rev: '555953b2129fddd2038e25bd98d7977ce06e1ebc',
+					msg: 'msg',
+					timestamp: '2017-06-22T00:00:00+00:00',
+					author: 'Strider'
+				},
+				main: true,
+				override: 'main',
+			}
+		})
+	})
 })
