@@ -1,8 +1,5 @@
 /* @flow */
 
-declare var describe: Function;
-declare var it: Function;
-
 import rootpath from 'rootpath'
 import { expect } from 'chai'
 
