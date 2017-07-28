@@ -60,12 +60,12 @@ export default function bridge (options: any)
 
 	cfg._ = _
 
-	cfg.get = function get (path: Path, defval: any)
+	cfg.get = function get (path: Path, defval: any = null)
 	{
 		return getpath(_.all, path, defval)
 	}
 
-	cfg.nsget = function nsget (ns: string, path: Path, defval: any)
+	cfg.nsget = function nsget (ns: string, path: Path, defval: any = null)
 	{
 		return getpath(getpath(_, ns), path, defval)
 	}
