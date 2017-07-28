@@ -37,6 +37,9 @@
     "start":
       "metalbox preset dev",
 
+    "test":
+      "npm run st && npm run flow && npm run unit",
+
 
     "st":
       "eslint src/ test/",
@@ -52,10 +55,6 @@
                       "mocha    --recursive release/dev/test/",
     "cover":
       "istanbul cover _mocha -- --recursive release/dev/test/",
-
-
-    "test":
-      "npm run st && npm run flow && npm run unit",
 
 
     "release":
