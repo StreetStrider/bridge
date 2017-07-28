@@ -12,6 +12,8 @@ describe('bridge', () =>
 {
 	it('exposes API', () =>
 	{
+		process.chdir(fromroot())
+
 		var cfg = bridge()
 
 		expect(cfg).property('get')
