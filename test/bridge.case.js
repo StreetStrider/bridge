@@ -6,7 +6,7 @@ import { expect } from 'chai'
 import bridge from '../'
 
 var fromroot = rootpath(__dirname, '../', '../..')
-var fromfix  = fromroot.partial('fixt/')
+var fromfix  = fromroot.partial('test/fixt/')
 
 describe('bridge', () =>
 {

@@ -9,7 +9,7 @@ var fromroot = rootpath(__dirname, '../', '../..')
 
 describe('bridge#get,nsget', () =>
 {
-	process.chdir(fromroot('fixt/get'))
+	process.chdir(fromroot('test/fixt/get'))
 
 	var cfg = bridge()
 
