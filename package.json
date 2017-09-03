@@ -19,6 +19,17 @@
 
   "main": "bridge",
 
+  "files":
+  [
+    "*.js",
+    "json/",
+    "hjson/",
+    "jsnext/",
+
+    "license.txt",
+    "readme.md"
+  ],
+
   "metalbox":
   {
     "presets":
