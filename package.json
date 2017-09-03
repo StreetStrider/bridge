@@ -1,9 +1,7 @@
 {
-     "name": "bridge",
-  "version": "0.0.0",
+     "name": "@streetstrider/bridge",
+  "version": "1.0.0",
   "license": "ISC",
-
-  "private": true,
 
   "author": "Strider <strange.transistor@gmail.com>",
   "description": "config loader",
