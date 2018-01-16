@@ -19,6 +19,7 @@ var defaults =
 	file: 'cfg',
 }
 
+// eslint-disable-next-line max-statements
 export default function bridge (options: any)
 {
 	options = assign({}, defaults, options)
