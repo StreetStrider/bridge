@@ -1,0 +1,26 @@
+
+declare module '@streetstrider/bridge'
+{
+	declare type Options =
+	{
+		dir?:  string,
+		file?: string,
+	}
+
+	;
+
+	declare type Path = string | string[]
+
+	;
+
+	declare type Bridge =
+	{
+		get   (path: Path, defval?: any): any,
+		nsget (path: Path, defval?: any): any,
+		[path: string]: any,
+	}
+
+	;
+
+	declare export default function bridge (options?: Options): Bridge;
+}
