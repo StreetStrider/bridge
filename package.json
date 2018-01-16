@@ -43,13 +43,13 @@
       "metalbox preset dev",
 
     "test":
-      "npm run st && npm run flow && npm run unit",
+      "npm run st && npm run t && npm run unit",
 
 
     "st":
       "eslint src/ test/ *.js",
 
-    "flow":
+    "t":
       "flow check",
 
 
