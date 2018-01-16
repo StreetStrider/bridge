@@ -6,7 +6,7 @@
 ## how it works
 
 ```js
-import bridge from 'bridge'
+import bridge from '@streetstrider/bridge'
 
 var cfg = bridge(options)
 ```
