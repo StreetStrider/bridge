@@ -72,7 +72,7 @@
       "1",
 
     "@streetstrider/rootpath":
-      "1",
+      "2",
 
     "hjson":
       "3",
@@ -97,7 +97,7 @@
       "StrangeTransistor/js-outlander#2.3.0",
 
     "flow-bin":
-      "0.54",
+      "0.63",
 
     "flow-typed":
       "2",

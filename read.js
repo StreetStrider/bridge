@@ -11,10 +11,10 @@ export default function read (path: string)
 
 read.maybe = function (path: string, defval: any = null)
 {
-	return coalesce([ path ], defval)
+	return read.coalesce([ path ], defval)
 }
 
-var coalesce = read.coalesce = function (paths: string[], defval: any = null)
+read.coalesce = function (paths: string[], defval: any = null)
 {
 	for (let path of paths)
 	{

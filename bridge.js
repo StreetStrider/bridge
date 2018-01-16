@@ -1,12 +1,12 @@
 /* @flow */
 
-import type { T_Rootpath as Rootpath } from 'rootpath'
+import type { $Rootpath } from '@streetstrider/rootpath'
 
 type Path = string | string[]
 
-var assign = Object.assign
+; var assign = Object.assign
 
-import rootpath  from 'rootpath'
+import rootpath  from '@streetstrider/rootpath'
 import find_root from 'find-root'
 import merge     from 'lodash/merge'
 import { get as getpath } from 'object-path'
@@ -73,7 +73,7 @@ export default function bridge (options: any)
 	return cfg
 }
 
-function candidates (dir: Rootpath, file: string)
+function candidates (dir: $Rootpath, file: string)
 {
 	return [
 		dir(file + '.hjson'),

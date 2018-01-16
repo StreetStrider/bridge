@@ -1,11 +1,11 @@
 /* @flow */
 
-import rootpath from 'rootpath'
+import rootpath from '@streetstrider/rootpath'
 import { expect } from 'chai'
 
 import bridge from '../'
 
-var fromroot = rootpath(__dirname, '../', '../..')
+var fromroot = rootpath()
 var fromfix  = fromroot.partial('test/fixt/')
 
 describe('bridge', () =>
