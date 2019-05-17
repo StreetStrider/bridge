@@ -47,7 +47,7 @@
 
 
     "st":
-      "eslint src/ test/ *.js",
+      "eslint json/ hjson/ test/ *.js",
 
     "t":
       "flow check",
@@ -91,10 +91,10 @@
 
 
     "eslint":
-      "4.13",
+      "5",
 
     "js-outlander":
-      "StrangeTransistor/js-outlander#2.3.0",
+      "StrangeTransistor/js-outlander#2.5.0",
 
     "flow-bin":
       "0.98",
