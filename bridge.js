@@ -1,23 +1,27 @@
 /* @flow */
 
 import type { $Rootpath } from '@streetstrider/rootpath'
-
 type Path = string | string[]
 
-; var assign = Object.assign
+
+var assign = Object.assign
+
 
 import rootpath  from '@streetstrider/rootpath'
 import find_root from 'find-root'
 import merge     from 'lodash/merge'
 import { get as getpath } from 'object-path'
 
+
 import read from './read'
+
 
 var defaults =
 {
 	dir:  'cfg/',
 	file: 'cfg',
 }
+
 
 // eslint-disable-next-line max-statements
 export default function bridge (options: any)
