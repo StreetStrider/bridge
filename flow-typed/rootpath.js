@@ -1,3 +1,4 @@
+/* @flow */
 
 declare module '@streetstrider/rootpath'
 {
@@ -18,6 +19,8 @@ declare module '@streetstrider/rootpath'
 
 	declare interface $Rootpath extends Rootpath$Resolver
 	{
+		(...args: Rootpath$Path[]): string,
+
 		path: string,
 		resolve: Rootpath$Resolver,
 		relative(to: Rootpath$Segment): string,
