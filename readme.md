@@ -5,7 +5,7 @@
   </a>
 
   <a href='https://coveralls.io/github/StreetStrider/bridge?branch=master'>
-    <img alt='Coverage' src='https://coveralls.io/repos/github/StreetStrider/bridge/badge.svg?branch=master&style=flat-square' />
+    <img alt='Coverage' src='https://img.shields.io/coveralls/github/StreetStrider/bridge.svg?style=flat-square' />
   </a>
 
 
