@@ -60,4 +60,4 @@ Namespaces:
 * `file: string = 'cfg'` — main config file. bridge will always look up for `{<file>.hjson,<file>.json,<file>}`.
 
 ## license
-ISC, © 2018, Strider.
+ISC, © 2019, Strider.
