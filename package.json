@@ -57,9 +57,10 @@
       "npm start -- -1 && npm run mocha",
 
     "mocha":
-                      "mocha    --recursive release/dev/test/",
+       "mocha --recursive release/dev/test/",
+
     "cover":
-      "istanbul cover _mocha -- --recursive release/dev/test/",
+      "nyc --reporter=lcov --reporter=text-summary npm run mocha",
 
 
     "release":
@@ -101,12 +102,12 @@
 
 
     "mocha":
-      "3",
+      "6",
 
     "chai":
-      "3",
+      "4",
 
-    "istanbul":
-      "0.4"
+    "nyc":
+      "14"
   }
 }
