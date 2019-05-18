@@ -1,3 +1,23 @@
+
+<p align='center'>
+  <a href='https://travis-ci.org/StreetStrider/bridge'>
+    <img alt='Travis' src='https://img.shields.io/travis/StreetStrider/bridge.svg?style=flat-square'>
+  </a>
+
+  <a href='https://coveralls.io/github/StreetStrider/bridge?branch=master'>
+    <img alt='Coverage' src='https://coveralls.io/repos/github/StreetStrider/bridge/badge.svg?branch=master&style=flat-square' />
+  </a>
+
+
+  <a href='https://www.npmjs.org/package/bridge'>
+    <img alt='npm|bridge' src='http://img.shields.io/badge/npm-@streetstrider/bridge-CB3837.svg?style=flat-square'>
+  </a>
+
+  <a href='#license'>
+    <img alt='ISC licensed' src='http://img.shields.io/badge/license-ISC-brightgreen.svg?style=flat-square'>
+  </a>
+</p>
+
 # bridge
 
 **bridge** is a simple Node.js config loader with some conventions.
