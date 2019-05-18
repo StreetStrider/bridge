@@ -1,3 +1,4 @@
+# bridge
 
 <p align='center'>
   <a href='https://travis-ci.org/StreetStrider/bridge'>
@@ -18,7 +19,6 @@
   </a>
 </p>
 
-# bridge
 
 **bridge** is a simple Node.js config loader with some conventions.
 
