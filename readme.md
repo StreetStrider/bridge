@@ -10,7 +10,7 @@
   </a>
 
 
-  <a href='https://www.npmjs.org/package/bridge'>
+  <a href='https://www.npmjs.org/package/@streetstrider/bridge'>
     <img alt='npm|bridge' src='http://img.shields.io/badge/npm-@streetstrider/bridge-CB3837.svg?style=flat-square'>
   </a>
 
